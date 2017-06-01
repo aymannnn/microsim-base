@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 #include <boost/random.hpp>
 
 // Source: https://github.com/namyaila/often_used
