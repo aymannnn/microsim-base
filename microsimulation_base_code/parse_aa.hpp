@@ -1,5 +1,5 @@
 #pragma once
-
+#include "stdafx.h"
 #include <sstream>
 #include <fstream>
 #include <vector>
