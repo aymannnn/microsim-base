@@ -11,45 +11,45 @@ class rng
 {
 private:
 
-    static int _seed;
-    static boost::random::mt19937 _generator;
+    static int seed_;
+    static boost::random::mt19937 generator_;
 
 public:
 
     static double uniform(const double &lower = 0, const double &upper = 1)
     {
         boost::random::uniform_real_distribution<> dis(lower, upper);
-        return dis(_generator);
+        return dis(generator_);
     }
 
     static double lognormal(const double &mean, const double &std)
     {
         boost::random::lognormal_distribution<> dis(mean, std);
-        return dis(_generator);
+        return dis(generator_);
     }
 
     static double weibull(const double &shape, const double &scale)
     {
         boost::random::weibull_distribution<> dis(shape, scale);
-        return dis(_generator);
+        return dis(generator_);
     }
 
     static double normal(const double &mean, const double &standard_deviation)
     {
         boost::random::normal_distribution<> dis(mean, standard_deviation);
-        return dis(_generator);
+        return dis(generator_);
     }
 
     static int uniform_int(const int &lower, const int &upper)
     {
         boost::random::uniform_int_distribution<> dis(lower, upper);
-        return dis(_generator);
+        return dis(generator_);
     }
 
     static double gamma(const double &alpha, const double &beta)
     {
         boost::random::gamma_distribution<> dis(alpha, beta);
-        return dis(_generator);
+        return dis(generator_);
     }
 
     static double beta(const double &alpha, const double &beta)
@@ -61,19 +61,16 @@ public:
 
     static void update_seed(int seed)
     {
-        _seed = seed;
-        _generator.seed(_seed);
+        seed_ = seed;
+        generator_.seed(seed_);
     }
 
     static double current_seed()
     {
-        return _seed;
+        return seed_;
     }
 
 }; // End rng class
-
-int rng::_seed = 7;
-boost::random::mt19937 rng::_generator(rng::_seed);
 
 inline bool dbl_eq(const double &a, const double &b)
 {

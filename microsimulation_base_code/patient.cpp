@@ -5,7 +5,7 @@
 #include "life_tables.h"
 #include "modeling_aa.hpp"
 
-patient::patient(std::shared_ptr<literature_params> copy_lit_params, 
+patient::patient(std::shared_ptr<LiteratureParams> copy_lit_params, 
                  std::shared_ptr<calibrated_params> copy_calib_params) :
     lp(copy_lit_params),
     cp(copy_calib_params),

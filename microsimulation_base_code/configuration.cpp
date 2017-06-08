@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include "life_tables.h"
+#include <iostream>
 
 
 // Declaration of external constant to hold model settings.
@@ -21,7 +22,11 @@ configuration_params::configuration_params()
 void configuration_params::parse_input_file()
 {
     using namespace std;
-    ifstream input_file("../../input/configuration");
+    ifstream input_file("../input/configuration");
+    
+    if (!input_file) {
+        std::cout << "\nFailed to open input file";
+    }
     string hold_line;
 
     parse::getline_ignore_comments(input_file, hold_line, comment);    

@@ -135,14 +135,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="calibrated_params.h" />
     <ClInclude Include="configuration.h" />
     <ClInclude Include="life_tables.h" />
     <ClInclude Include="literature_params.h" />
     <ClInclude Include="modeling_aa.hpp" />
+    <ClInclude Include="parameter_distributions.h" />
     <ClInclude Include="parse_aa.hpp" />
     <ClInclude Include="results.h" />
     <ClInclude Include="stdafx.h" />
@@ -153,7 +151,8 @@
     <ClCompile Include="configuration.cpp" />
     <ClCompile Include="life_tables.cpp" />
     <ClCompile Include="literature_params.cpp" />
-    <ClCompile Include="microsimulation_base_code.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="parameter_distributions.cpp" />
     <ClCompile Include="patient.cpp" />
     <ClCompile Include="results.cpp" />
     <ClCompile Include="stdafx.cpp">

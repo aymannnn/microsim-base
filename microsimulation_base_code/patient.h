@@ -3,7 +3,7 @@
 #include <memory>
 
 class calibrated_params;
-class literature_params;
+class LiteratureParams;
 
 // File will hold patient class and characteristics.
 
@@ -11,7 +11,7 @@ class patient
 {
 public:
 
-    std::shared_ptr<literature_params> lp;
+    std::shared_ptr<LiteratureParams> lp;
     std::shared_ptr<calibrated_params> cp;
     
     bool alive;
@@ -24,7 +24,7 @@ public:
 public:
 
     void check_death();
-    patient(std::shared_ptr<literature_params> copy_lit_params,
+    patient(std::shared_ptr<LiteratureParams> copy_lit_params,
             std::shared_ptr<calibrated_params> copy_calib_params);
 
 
