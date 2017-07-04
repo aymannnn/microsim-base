@@ -1,7 +1,7 @@
 #pragma once
 
 #include <array>
-#include "modeling_aa.hpp"
+#include "common_modeling_aa.hpp"
 
 class patient;
 

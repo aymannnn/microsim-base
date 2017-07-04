@@ -31,7 +31,7 @@ void configuration_params::parse_input_file()
 
     parse::getline_ignore_comments(input_file, hold_line, comment);    
     // Need to staticly cast integers to enumerator values.
-    m_gender = static_cast<gender>(stoi(hold_line));
+    m_gender = static_cast<Gender>(stoi(hold_line));
 
     input_file.close();
 }

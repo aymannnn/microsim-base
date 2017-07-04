@@ -22,7 +22,7 @@ std::array<double, 100> life_tables::all =
 
 std::array<double, 100> life_tables::table{ 0 };
 
-void life_tables::set_table(gender const &gend)
+void life_tables::set_table(Gender const &gend)
 {
     switch (gend)
     {

@@ -1,23 +1,24 @@
 #pragma once
 
+namespace parameters
+{
 
-#include <array>
-
-enum gender
+enum Gender
 {
     MALE, FEMALE, ALL, NUMBER_GENDER_SETTINGS
 };
 
-enum type_of_run
+enum Runtype
 {
-    CALIBRATION, 
+    CALIBRATION, REGULAR_SIMULATION
 };
 
-class configuration_params
+
+class Configuration
 {
 public:
-    configuration_params();
-    gender m_gender;
+    Configuration();
+    Gender m_gender;
 private:
     void parse_input_file();
     static const char comment;
@@ -25,5 +26,6 @@ private:
 
 // Constant global parameter settings: will read from an input file.
 // Sets up life tables, etc.
+} // end namespace parameters
 
-extern const configuration_params settings;
+extern const parameters::Configuration settings;

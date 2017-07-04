@@ -1,6 +1,5 @@
 #pragma once
 #include <boost/random.hpp>
-
 // Source: https://github.com/namyaila/often_used
 
 namespace often_aa

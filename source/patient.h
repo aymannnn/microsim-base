@@ -5,8 +5,6 @@
 class calibrated_params;
 class LiteratureParams;
 
-// File will hold patient class and characteristics.
-
 class patient
 {
 public:

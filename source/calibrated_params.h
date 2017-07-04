@@ -1,10 +1,14 @@
 #pragma once
 
+namespace parameters
+{
 
-class calibrated_params
+class Calibrated
 {
 public:
-    calibrated_params();
+    Calibrated();
     // empty for now...
-
 };
+
+}
+

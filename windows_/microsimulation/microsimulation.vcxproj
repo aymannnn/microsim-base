@@ -72,12 +72,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Ayman\Desktop\Boost\boost_1_62_0;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\Ayman\Desktop\Boost\boost_1_62_0;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -140,12 +142,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\source\calibrated_params.h" />
+    <ClInclude Include="..\..\source\common_modeling_aa.hpp" />
     <ClInclude Include="..\..\source\configuration.h" />
     <ClInclude Include="..\..\source\life_tables.h" />
     <ClInclude Include="..\..\source\literature_params.h" />
-    <ClInclude Include="..\..\source\often_used\common_modeling_aa.hpp" />
-    <ClInclude Include="..\..\source\often_used\parse_aa.hpp" />
-    <ClInclude Include="..\..\source\parameter_distributions.h" />
+    <ClInclude Include="..\..\source\parse_aa.hpp" />
     <ClInclude Include="..\..\source\patient.h" />
     <ClInclude Include="..\..\source\results.h" />
   </ItemGroup>
@@ -155,7 +156,6 @@
     <ClCompile Include="..\..\source\life_tables.cpp" />
     <ClCompile Include="..\..\source\literature_params.cpp" />
     <ClCompile Include="..\..\source\main.cpp" />
-    <ClCompile Include="..\..\source\parameter_distributions.cpp" />
     <ClCompile Include="..\..\source\patient.cpp" />
     <ClCompile Include="..\..\source\results.cpp" />
   </ItemGroup>
