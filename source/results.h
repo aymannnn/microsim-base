@@ -1,5 +1,5 @@
 #pragma once
-#include "stdafx.h"
+
 #include <array>
 #include "modeling_aa.hpp"
 

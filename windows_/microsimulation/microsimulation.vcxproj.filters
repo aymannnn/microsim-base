@@ -15,63 +15,57 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="..\..\source\calibrated_params.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
+    <ClInclude Include="..\..\source\configuration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="calibrated_params.h">
+    <ClInclude Include="..\..\source\life_tables.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="configuration.h">
+    <ClInclude Include="..\..\source\literature_params.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="life_tables.h">
+    <ClInclude Include="..\..\source\parameter_distributions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="literature_params.h">
+    <ClInclude Include="..\..\source\patient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="modeling_aa.hpp">
+    <ClInclude Include="..\..\source\results.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="parse_aa.hpp">
+    <ClInclude Include="..\..\source\often_used\parse_aa.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="results.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="parameter_distributions.h">
+    <ClInclude Include="..\..\source\often_used\common_modeling_aa.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="..\..\source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="calibrated_params.cpp">
+    <ClCompile Include="..\..\source\parameter_distributions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="configuration.cpp">
+    <ClCompile Include="..\..\source\patient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="life_tables.cpp">
+    <ClCompile Include="..\..\source\results.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="literature_params.cpp">
+    <ClCompile Include="..\..\source\calibrated_params.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="patient.cpp">
+    <ClCompile Include="..\..\source\configuration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="results.cpp">
+    <ClCompile Include="..\..\source\life_tables.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="parameter_distributions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="..\..\source\literature_params.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -20,10 +20,10 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A4785C14-25B4-4307-B0A0-9ADF076247E2}</ProjectGuid>
+    <ProjectGuid>{FA63E084-BE93-4D92-B2B5-A2A637349456}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>microsimulation_base_code</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <RootNamespace>microsimulation</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -84,7 +84,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -95,7 +96,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -107,7 +109,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -122,7 +125,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -135,32 +139,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="calibrated_params.h" />
-    <ClInclude Include="configuration.h" />
-    <ClInclude Include="life_tables.h" />
-    <ClInclude Include="literature_params.h" />
-    <ClInclude Include="modeling_aa.hpp" />
-    <ClInclude Include="parameter_distributions.h" />
-    <ClInclude Include="parse_aa.hpp" />
-    <ClInclude Include="results.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\..\source\calibrated_params.h" />
+    <ClInclude Include="..\..\source\configuration.h" />
+    <ClInclude Include="..\..\source\life_tables.h" />
+    <ClInclude Include="..\..\source\literature_params.h" />
+    <ClInclude Include="..\..\source\often_used\common_modeling_aa.hpp" />
+    <ClInclude Include="..\..\source\often_used\parse_aa.hpp" />
+    <ClInclude Include="..\..\source\parameter_distributions.h" />
+    <ClInclude Include="..\..\source\patient.h" />
+    <ClInclude Include="..\..\source\results.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="calibrated_params.cpp" />
-    <ClCompile Include="configuration.cpp" />
-    <ClCompile Include="life_tables.cpp" />
-    <ClCompile Include="literature_params.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="parameter_distributions.cpp" />
-    <ClCompile Include="patient.cpp" />
-    <ClCompile Include="results.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="..\..\source\calibrated_params.cpp" />
+    <ClCompile Include="..\..\source\configuration.cpp" />
+    <ClCompile Include="..\..\source\life_tables.cpp" />
+    <ClCompile Include="..\..\source\literature_params.cpp" />
+    <ClCompile Include="..\..\source\main.cpp" />
+    <ClCompile Include="..\..\source\parameter_distributions.cpp" />
+    <ClCompile Include="..\..\source\patient.cpp" />
+    <ClCompile Include="..\..\source\results.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,5 +1,5 @@
 #pragma once
-#include "stdafx.h"
+
 #include <boost/math/distributions/beta.hpp>
 #include <boost/math/distributions/normal.hpp>
 #include <boost/math/distributions/gamma.hpp>

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "configuration.h"
 #include "parse_aa.hpp"
 #include <fstream>

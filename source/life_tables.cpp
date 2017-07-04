@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "life_tables.h"
 #include "configuration.h"
 #include <iostream>

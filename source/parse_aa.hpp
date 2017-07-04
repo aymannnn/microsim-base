@@ -1,12 +1,9 @@
 #pragma once
-#include "stdafx.h"
+
 #include <sstream>
-#include <fstream>
 #include <vector>
 #include <string>
-
-
-// Source: https://github.com/namyaila/often_used
+#include <fstream>
 
 namespace parse
 {
@@ -19,7 +16,7 @@ void strip_whitespace(std::string &token)
     }
 }
 
-std::vector<std::string> break_line_into_tokens(std::string const &line,
+std::vector<std::string> break_line_into_tokens(std::string const &line, 
                                                 char const &delim)
 {
     std::stringstream ss(line);

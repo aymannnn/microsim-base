@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "patient.h"
 #include "calibrated_params.h"
 #include "literature_params.h"

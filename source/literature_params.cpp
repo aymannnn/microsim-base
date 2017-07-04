@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "literature_params.h"
 #include "parameter_distributions.h"
 
