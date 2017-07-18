@@ -29,7 +29,7 @@ public:
     double current_value;
     virtual double standard_deviation();
     virtual double pdf(const double value);
-    param_type_t param_type;
+    ParamType param_type;
 };
 
 class Beta : public Base

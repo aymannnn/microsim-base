@@ -33,10 +33,10 @@
     <ClInclude Include="..\..\source\results.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\source\common_modeling_aa.hpp">
+    <ClInclude Include="..\..\source\common_modeling_aa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\source\parse_aa.hpp">
+    <ClInclude Include="..\..\source\parse_aa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -60,6 +60,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\source\literature_params.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common_modeling_aa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\parse_aa.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

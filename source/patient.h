@@ -2,15 +2,18 @@
 
 #include <memory>
 
-class calibrated_params;
-class LiteratureParams;
+namespace parameters
+{
+class Calibrated;
+class Literature;
+}
 
 class patient
 {
 public:
 
-    std::shared_ptr<LiteratureParams> lp;
-    std::shared_ptr<calibrated_params> cp;
+    std::shared_ptr<parameters::Literature> lp;
+    std::shared_ptr<parameters::Calibrated> cp;
     
     bool alive;
     int current_age;
@@ -22,8 +25,8 @@ public:
 public:
 
     void check_death();
-    patient(std::shared_ptr<LiteratureParams> copy_lit_params,
-            std::shared_ptr<calibrated_params> copy_calib_params);
+    patient(std::shared_ptr<parameters::Literature> copy_lit_params,
+            std::shared_ptr<parameters::Calibrated> copy_calib_params);
 
 
 

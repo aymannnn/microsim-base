@@ -5,22 +5,22 @@
 namespace parameters
 {
 
-parameter::parameter() : current_value(-1), param_type(NOT_SET) {};
+Base::Base() : current_value(-1), param_type(NOT_SET) {};
 
-double parameter::standard_deviation()
+double Base::standard_deviation()
 {
     std::cout << "STD not set for the parameter type." << std::endl;
     return -DBL_MAX;
 }
 
-double parameter::pdf(const double &value)
+double Base::pdf(const double value)
 {
     std::cout << "PDF function not set for the parameter type." << std::endl;
     return value;
 }
 
-void Beta::set_beta_dist(const double &success, const double &trials,
-                               const param_type_t &type)
+void Beta::set_beta_dist(const double success, const double trials,
+                         const ParamType type)
 {
     boost::math::beta_distribution<> set(success, trials - success);
     beta_dist = set;
@@ -33,13 +33,13 @@ double Beta::standard_deviation()
     return boost::math::standard_deviation(beta_dist);
 }
 
-double Beta::pdf(const double &value)
+double Beta::pdf(const double value)
 {
     return boost::math::pdf(beta_dist, value);
 }
 
-void Normal::set_normal_dist(const double &mean, const double &std,
-                                        const param_type_t &type)
+void Normal::set_normal_dist(const double mean, const double std,
+                             const ParamType type)
 {
     boost::math::normal_distribution<> set(mean, std);
     normal_dist = set;
@@ -52,7 +52,7 @@ double Normal::standard_deviation()
     return boost::math::standard_deviation(normal_dist);
 }
 
-double Normal::pdf(const double &value)
+double Normal::pdf(const double value)
 {
     return boost::math::pdf(normal_dist, value);
 }
@@ -60,8 +60,8 @@ double Normal::pdf(const double &value)
 // Gamma distribution doesn't have a default constructor ...
 Gamma::Gamma() : gamma_dist(1, 1) {}
 
-void Gamma::set_gamma_dist(const double &shape, const double &scale,
-                                      const param_type_t &type)
+void Gamma::set_gamma_dist(const double shape, const double scale,
+                           const ParamType type)
 {
     boost::math::gamma_distribution<> set(shape, scale);
     param_type = type;
@@ -74,13 +74,13 @@ double Gamma::standard_deviation()
     return boost::math::standard_deviation(gamma_dist);
 }
 
-double Gamma::pdf(const double &value)
+double Gamma::pdf(const double value)
 {
     return boost::math::pdf(gamma_dist, value);
 }
 
-void Lognormal::set_lognormal_dist(const double & mu,
-                                              const double & sigma, const param_type_t &type)
+void Lognormal::set_lognormal_dist(const double mu, const double sigma,
+                                   const ParamType type)
 {
     boost::math::lognormal_distribution<> set(mu, sigma);
     lognorm_dist = set;
@@ -93,13 +93,14 @@ double Lognormal::standard_deviation()
     return boost::math::standard_deviation(lognorm_dist);
 }
 
-double Lognormal::pdf(const double &value)
+double Lognormal::pdf(const double value)
 {
     return boost::math::pdf(lognorm_dist, value);
 }
 
-void Uniform::set_uniform_dist(const double &mean,
-                                     const double &mean_to_bound, const param_type_t &type)
+void Uniform::set_uniform_dist(const double mean,
+                               const double mean_to_bound,
+                               const ParamType type)
 {
     boost::math::uniform_distribution<> set(mean - mean_to_bound,
                                             mean + mean_to_bound);
@@ -113,14 +114,15 @@ double Uniform::standard_deviation()
     return boost::math::standard_deviation(uniform_dist);
 }
 
-double Uniform::pdf(const double &value)
+double Uniform::pdf(const double value)
 {
     return boost::math::pdf(uniform_dist, value);
 }
-void literature_params::add_parameter(distribution_type_t const & dist_type,
-                                      param_type_t const & param_type,
-                                      const double & param1,
-                                      const double & param2)
+
+void Literature::add_parameter(DistributionType const dist_type,
+                               ParamType const param_type,
+                               const double param1,
+                               const double param2)
 {
     if (dist_type == BETA)
     {
@@ -154,7 +156,7 @@ void literature_params::add_parameter(distribution_type_t const & dist_type,
     }
 }
 
-literature_params::literature_params()
+Literature::Literature()
 {
     add_parameter(BETA, PROBABILITY, 5, 10);
 }

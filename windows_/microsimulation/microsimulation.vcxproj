@@ -23,7 +23,6 @@
     <ProjectGuid>{FA63E084-BE93-4D92-B2B5-A2A637349456}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>microsimulation</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -142,20 +141,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\source\calibrated_params.h" />
-    <ClInclude Include="..\..\source\common_modeling_aa.hpp" />
+    <ClInclude Include="..\..\source\common_modeling_aa.h" />
     <ClInclude Include="..\..\source\configuration.h" />
     <ClInclude Include="..\..\source\life_tables.h" />
     <ClInclude Include="..\..\source\literature_params.h" />
-    <ClInclude Include="..\..\source\parse_aa.hpp" />
+    <ClInclude Include="..\..\source\parse_aa.h" />
     <ClInclude Include="..\..\source\patient.h" />
     <ClInclude Include="..\..\source\results.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\calibrated_params.cpp" />
+    <ClCompile Include="..\..\source\common_modeling_aa.cpp" />
     <ClCompile Include="..\..\source\configuration.cpp" />
     <ClCompile Include="..\..\source\life_tables.cpp" />
     <ClCompile Include="..\..\source\literature_params.cpp" />
     <ClCompile Include="..\..\source\main.cpp" />
+    <ClCompile Include="..\..\source\parse_aa.cpp" />
     <ClCompile Include="..\..\source\patient.cpp" />
     <ClCompile Include="..\..\source\results.cpp" />
   </ItemGroup>

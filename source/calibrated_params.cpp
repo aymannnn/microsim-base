@@ -1,7 +1,11 @@
-
 #include "calibrated_params.h"
 
-calibrated_params::calibrated_params()
+namespace parameters
 {
+
+Calibrated::Calibrated()
+{
+
+}
 
 }
