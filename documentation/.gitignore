@@ -1,0 +1,9 @@
+# Ignore things that pdfLATEX generates.
+
+*.aux
+*.lof
+*.lot
+*.synctex.gz
+*.toc
+*.out
+

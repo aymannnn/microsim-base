@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.00in]{geometry}
+\usepackage{amssymb,amsmath}
+\usepackage{hyperref}
+\setlength{\parskip}{.75em}
+
+\begin{document}
+
+
+\title{%
+    A C++ Template for Writing Medical Decision Models \\
+}
+\author{Ayman Ali \\ 
+    Institute for Technology Assessment \\ 
+    Massachusetts General Hospital}
+\date{}
+\maketitle
+
+\flushleft {Source code can be found at: \\
+    \url{https://github.com/namyaila/microsim_base}
+\clearpage
+
+% Table of Contents
+\tableofcontents
+\listoffigures
+\listoftables
+
+\clearpage
+
+\section{Setup}
+\subsection{Git}
+\subsection{Organization}
+\subsection{Running an Analysis}
+\subsection{Development}
+\subsection{Common Issues with Building and Compiling}
+\subsubsection{Windows}
+Probably the most common issue will be that Visual Studio can't find <boost/file.hpp>. If this happens, then make sure that you've downloaded boost. Once you have, make sure that you installed it in the include search path of whatever Visual Studio version you're working on. You can also just install boost on the desktop and add that to your include path. Doesn't really matter.
+
+If you get an error building the library that deals with not being able to find functions that are in the standard library (cmath, vector, etc.) then all that's happening is the project is looking in the wrong spot for the includes. So, to fix this, go to the solution explorer and right click on the project. Click properties, and where it says Windows SDK Version, choose whatever version of Windows you're on.
+
+\section{Calibration}
+\subsection{Assumptions}
+\subsection{Targets}
+\subsection{Calibrated Parameters}
+\subsection{Configuration}
+\subsection{Natural History}
+\section{Main Simulation}
+\subsection{Configuration}
+\subsection{Integration with Natural History}
+\subsection{Processing Results}
+
+
+
+\end{document}
