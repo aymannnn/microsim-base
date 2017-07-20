@@ -1,33 +1,36 @@
 #pragma once
 #include <vector>
+#include <map>
+#include <string>
 
-namespace parameters
+namespace distributions
 {
 
-namespace distributions // forward declarations
+namespace literature
 {
 
 enum ParamType;
 enum DistributionType;
 class Base;
 
-} // end forward declarations for distributions
+} // end forward declarations for literature
 
-enum LiteratureEnum
+} // end forward declaration for distributions
+
+
+namespace parameters
 {
-    EXAMPLE_LP,
-    NUMBER_OF_LPS
-};
 
 class Literature
 {
 public:
     Literature();
-    std::vector<distributions::Base> container_;
+    std::map<std::string, distributions::literature::Base> params;
 private:
-    void add_parameter(distributions::DistributionType const dist_type,
-                       distributions::ParamType const param_type,
-                       const double param1, const double param2);
+    void add_parameter(
+        distributions::literature::DistributionType const dist_type,
+        distributions::literature::ParamType const param_type,
+        const std::string param_key, const double param1, const double param2);
 };
 
 

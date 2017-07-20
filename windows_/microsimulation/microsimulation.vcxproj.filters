@@ -39,7 +39,10 @@
     <ClInclude Include="..\..\source\parse_aa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\source\param_distributions.h">
+    <ClInclude Include="..\..\source\distributions_literature.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\distributions_calibration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -71,7 +74,7 @@
     <ClCompile Include="..\..\source\parse_aa.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\source\param_distributions.cpp">
+    <ClCompile Include="..\..\source\distributions_literature.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

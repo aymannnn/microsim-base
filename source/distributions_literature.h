@@ -6,10 +6,10 @@
 #include <boost/math/distributions/uniform.hpp>
 #include <string>
 
-namespace parameters
+namespace distributions
 {
 
-namespace distributions
+namespace literature
 {
 
 enum ParamType
@@ -89,6 +89,6 @@ private:
     boost::math::uniform_distribution<> uniform_dist;
 };
 
-} // end namespace distributions
+} // end namespace literature
 
-} // end namespace parameters
+} // end namespace distributions

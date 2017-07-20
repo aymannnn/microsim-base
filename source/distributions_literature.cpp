@@ -1,10 +1,10 @@
-#include "param_distributions.h"
 #include <iostream>
-
-namespace parameters
-{
+#include "distributions_literature.h"
 
 namespace distributions
+{
+
+namespace literature
 {
 
 Base::Base() : current_value(-1), param_type(NOT_SET) {};
@@ -121,5 +121,10 @@ double Uniform::pdf(const double value)
     return boost::math::pdf(uniform_dist, value);
 }
 
-} // distributions
-} // end namespace parameters
+} // end namespace literature
+
+
+
+
+
+} // end namespace distributions

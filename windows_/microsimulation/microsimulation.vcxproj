@@ -144,9 +144,10 @@
     <ClInclude Include="..\..\source\calibrated_params.h" />
     <ClInclude Include="..\..\source\common_modeling_aa.h" />
     <ClInclude Include="..\..\source\configuration.h" />
+    <ClInclude Include="..\..\source\distributions_calibration.h" />
     <ClInclude Include="..\..\source\life_tables.h" />
     <ClInclude Include="..\..\source\literature_params.h" />
-    <ClInclude Include="..\..\source\param_distributions.h" />
+    <ClInclude Include="..\..\source\distributions_literature.h" />
     <ClInclude Include="..\..\source\parse_aa.h" />
     <ClInclude Include="..\..\source\patient.h" />
     <ClInclude Include="..\..\source\results.h" />
@@ -158,7 +159,7 @@
     <ClCompile Include="..\..\source\life_tables.cpp" />
     <ClCompile Include="..\..\source\literature_params.cpp" />
     <ClCompile Include="..\..\source\main.cpp" />
-    <ClCompile Include="..\..\source\param_distributions.cpp" />
+    <ClCompile Include="..\..\source\distributions_literature.cpp" />
     <ClCompile Include="..\..\source\parse_aa.cpp" />
     <ClCompile Include="..\..\source\patient.cpp" />
     <ClCompile Include="..\..\source\results.cpp" />
