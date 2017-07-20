@@ -8,3 +8,4 @@ Currently devleoping on Windows (since it's what I use at my research facility) 
 
 * Incorporate basic calibration code; implement greedy search, simulated annealing, greedy descent with simulated annealing at local minmium solutions.
 * See if there is a cleaner way to sort though literature parameters; perhaps with a map? A method that makes it not as difficult to manage.
+* Actually start writing documentation while writing code ... 
