@@ -9,15 +9,15 @@
 // Declaration of external constant to hold model settings.
 
 const parameters::Configuration settings;
-const char parameters::Configuration::comment = '#';
-
+const char parameters::Configuration::comment_ = '#';
+const char parameters::Configuration::delim_ = ',';
 
 namespace parameters
 {
 Configuration::Configuration()
 {
     parse_input_file();
-    input_tables::Life::set_table(m_gender);
+    input_tables::Life::set_table(gender_);
 }
 
 void Configuration::parse_input_file()
@@ -26,17 +26,15 @@ void Configuration::parse_input_file()
     using std::string;
     using std::vector;
 
-    ifstream input_file("../input/configuration");
+    ifstream input_file("../input/calibrated_params", std::ios::in);
 
     if (!input_file) {
-        std::cout << "\nFailed to open input file";
+        std::cout << "\nFailed to open input file for configuration";
     }
-    string hold_line;
-
-    parse::getline_ignore_comments(input_file, hold_line, comment);
+    vector<string> tokenized_line; 
+    tokenized_line= parse::get_tokenized_line(input_file, comment_, delim_);
     // Need to staticly cast integers to enumerator values.
-    m_gender = static_cast<Gender>(stoi(hold_line));
-
+    gender_ = static_cast<Gender>(std::stoi(tokenized_line[0]));
     input_file.close();
 }
 } // end namespace parameters

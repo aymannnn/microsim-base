@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include <map>
+#include <unordered_map>
 #include <string>
 
 namespace distributions
@@ -25,7 +25,7 @@ class Literature
 {
 public:
     Literature();
-    std::map<std::string, distributions::literature::Base> params;
+    std::unordered_map<std::string, distributions::literature::Base> params;
 private:
     void add_parameter(
         distributions::literature::DistributionType const dist_type,

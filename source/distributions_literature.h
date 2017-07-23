@@ -26,11 +26,13 @@ class Base
 {
 public:
     Base();
-    std::string key;
-    double current_value;
+    std::string key_;
+    const double get_current_value();
     virtual double standard_deviation();
     virtual double pdf(const double value);
-    ParamType param_type;
+    ParamType param_type_;
+protected:
+    double current_value_;
 };
 
 class Beta : public Base
@@ -41,7 +43,7 @@ public:
     double standard_deviation();
     double pdf(const double value);
 private:
-    boost::math::beta_distribution<> beta_dist;
+    boost::math::beta_distribution<> beta_dist_;
 };
 
 class Normal : public Base
@@ -52,7 +54,7 @@ public:
     double standard_deviation();
     double pdf(const double value);
 private:
-    boost::math::normal_distribution<> normal_dist;
+    boost::math::normal_distribution<> normal_dist_;
 };
 
 class Gamma : public Base
@@ -64,7 +66,7 @@ public:
     double standard_deviation();
     double pdf(const double value);
 private:
-    boost::math::gamma_distribution<> gamma_dist;
+    boost::math::gamma_distribution<> gamma_dist_;
 };
 
 class Lognormal : public Base

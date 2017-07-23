@@ -1,6 +1,6 @@
 #include "common_modeling_aa.h"
 
-namespace common_modeling_aa
+namespace modeling
 {
 
 RandomNumberGenerator::RandomNumberGenerator(int const seed) {

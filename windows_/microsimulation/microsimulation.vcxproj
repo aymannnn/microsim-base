@@ -156,6 +156,7 @@
     <ClCompile Include="..\..\source\calibrated_params.cpp" />
     <ClCompile Include="..\..\source\common_modeling_aa.cpp" />
     <ClCompile Include="..\..\source\configuration.cpp" />
+    <ClCompile Include="..\..\source\distributions_calibration.cpp" />
     <ClCompile Include="..\..\source\life_tables.cpp" />
     <ClCompile Include="..\..\source\literature_params.cpp" />
     <ClCompile Include="..\..\source\main.cpp" />

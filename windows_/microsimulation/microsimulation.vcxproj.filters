@@ -77,5 +77,8 @@
     <ClCompile Include="..\..\source\distributions_literature.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\source\distributions_calibration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

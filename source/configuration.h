@@ -13,15 +13,27 @@ enum Runtype
     CALIBRATION, REGULAR_SIMULATION
 };
 
+enum CalibrationType
+{
+    SIMULATED_ANNEALING, GREEDY, GRASP
+};
+
+struct ExternalCalibrationSettings
+{
+    double step_size;
+    CalibrationType calibration_type;
+};
 
 class Configuration
 {
 public:
     Configuration();
-    Gender m_gender;
+    Gender gender_;
+    ExternalCalibrationSettings calibration;
 private:
     void parse_input_file();
-    static const char comment;
+    static const char comment_;
+    static const char delim_;
 };
 
 // Constant global parameter settings: will read from an input file.

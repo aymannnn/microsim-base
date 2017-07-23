@@ -1,0 +1,21 @@
+# The format for this file is very specific, so pay attention closely.
+# Spelling and capitalization really matters ... especially for the
+# type of the parameter.
+# The first thing to type is the parameter name exactaly how you will 
+# be calling it in the model code: for example, "COUCH_TO_5K".
+# Then, type the type of the parameter as either: CONSTANT, LINEAR, or
+# LOGISTIC.
+# Then, you must type the current value, lower bound, and upper bound of
+# EACH DISTINCT DEFINING VALUE OF THE CALIBRATED VALUE.
+# A constant has only one, since it's constant; a linear has two, which is
+# the intercept and slope; a logistic has three, which is
+# horizontal asymtote, shift, and steepness.
+# The ORDER OF DEFINING VALUES MATTERS, and it's the same as described
+# above.
+# The program will terminate (with a nice error) if anything is missing.
+# Note that everything must be comma separated. An example parameter is below.
+# Add as many parameters as you'd like. Comments (#), newlines, and
+# whitespace are ignored.
+
+BATHROOM_AFTER_COFFEE, CONSTANT, 0.5, 0, 1
+NEED_HELP_NOW, LOGISTIC, 1, 0, 1,    1, 0 , 1,    1, 0, 1

@@ -1,5 +1,6 @@
 #pragma once
-#include <map>
+#include <unordered_map>
+#include <vector>
 #include <string>
 
 
@@ -8,9 +9,9 @@ namespace distributions
 {
 namespace calibration
 {
-
-
-
+class Base;
+enum ParamType;
+struct DefiningValue;
 }
 }
 
@@ -21,9 +22,16 @@ namespace parameters
 class Calibrated
 {
 public:
-    Calibrated();
+    Calibrated(std::string input_file_name = "../input/calibrated_params");
     // empty for now...
-    std::map<std::string, 
+    std::unordered_map<std::string, distributions::calibration::Base> params_;
+private:
+    std::string input_file_name_;
+    void set_up_default();
+    void read_input_file();
+    char comment_ = '#';
+    char delim_ = ',';
+    void add_parameter(std::vector<std::string> &tokenized_from_file);
 };
 
 }
