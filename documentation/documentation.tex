@@ -45,7 +45,8 @@ Configuration parameters are set in a class that is initiated automatically at r
 The file format is meant to be simple, although admittedly fragile. Comments (lines beginning with a \#) and newlines are ignored; lines containing input settings are tokenized by comma. The parser for this is located in the header file \verb|"parse_aa.h"|. Assume that your configuration file reads:
 \begin{verbatim}
 # Simple example of a configuration file.
-# Input the gender to run (0 = male, 1 = female, 2 = all), a double for step size, and a boolean for calibration (0 = no, 1 = yes).
+# Input the gender to run (0 = male, 1 = female, 2 = all), a double for step
+# size, and a boolean for calibration (0 = no, 1 = yes).
 
 1, 0.01231, 1
 \end{verbatim}
