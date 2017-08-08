@@ -8,26 +8,28 @@ class Calibrated;
 class Literature;
 }
 
-class patient
+class Results;
+
+class Patient
 {
-public:
 
-    std::shared_ptr<parameters::Literature> lp;
-    std::shared_ptr<parameters::Calibrated> cp;
-    
-    bool alive;
-    int current_age;
-    int age_of_death;
-    bool detected_cancer;
-    int age_detection;
-    bool exists_malignancy;
+    static std::unique_ptr<Results> results;
+    static std::unique_ptr<parameters::Literature> lp_;
+    static std::unique_ptr<parameters::Calibrated> cp_;
 
-public:
+private:
 
+    bool alive_;
+    int current_age_;
+    int age_of_death_;
+    bool detected_cancer_;
+    int age_detection_;
+    bool exists_malignancy_;
     void check_death();
-    patient(std::shared_ptr<parameters::Literature> copy_lit_params,
-            std::shared_ptr<parameters::Calibrated> copy_calib_params);
 
+public:
 
-
+    Patient();
+    void update_lit_params(std::unique_ptr<parameters::Literature> lp);
+    void update_calib_params(std::unique_ptr<parameters::Calibrated> cp);
 };

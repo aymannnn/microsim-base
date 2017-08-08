@@ -3,21 +3,21 @@
 
 
 // Because lazy...
-char results::ofs = '\t';
-char results::nl = '\n';
+char Results::ofs = '\t';
+char Results::nl = '\n';
 
-results::results() :
+Results::Results() :
     cancer_incidence{},
     deaths{}
 {
 }
 
-void results::process_patient(patient const & p)
+void Results::process_patient(Patient const & p)
 {
     // now we add to the arrays where we want...
 }
 
-void results::print_results()
+void Results::print_results()
 {
     // etc...
 }

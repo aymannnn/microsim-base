@@ -1,10 +1,12 @@
 #pragma once
 #include <array>
 #include <vector>
+#include <atomic>
 
-class patient;
+class Patient;
 
-class results
+
+class Results
 {
     using annual_array = std::array<double, 100>;
     using two_d_vec_double = std::vector<std::vector<double>>;
@@ -15,7 +17,7 @@ private:
     static char ofs;
     static char nl;
 public:
-    results();
-    void process_patient(patient const &p);
+    Results();
+    void process_patient(Patient const &p);
     void print_results();
 };
