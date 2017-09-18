@@ -1,3 +1,5 @@
+Project is on hold; the probabilistic models I've been developing are much better suited for Python. There are many changes that have to be made here, and they'll happen as soon as I start a new project well suited for C++.
+
 # Description
 
 This repository contains code to create a microsimulation project in C++. Specifically, a disease modeling microsimulation. All of the code is in source/. The only dependency is Boost, which is what I use for random number generation and for statistical distributions.
