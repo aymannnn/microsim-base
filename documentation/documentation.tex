@@ -3,13 +3,15 @@
 \usepackage[margin=1.00in]{geometry}
 \usepackage{amssymb,amsmath}
 \usepackage{hyperref}
+\usepackage{verbatim}
+% verbatim for \begin{comment}
 \setlength{\parskip}{.75em}
 
 \begin{document}
 
 
 \title{%
-    A C++ Template for Writing Medical Decision Models \\
+    Frequently Used C++ Code for Medical Decision Models \\
 }
 \author{Ayman Ali}
 \date{}
@@ -29,37 +31,33 @@
 
 \clearpage
 
-\section{Setup}
-\subsection{Development}
-\subsection{Common Issues with Building and Compiling}
-\subsubsection{Windows}
-Probably the most common issue will be that Visual Studio can't find \verb|<boost/file.hpp>|. If this happens, then make sure that you've downloaded boost. Once you have, make sure that you installed it in the include search path of whatever Visual Studio version you're working on. You can also just install boost on the desktop and add that to your include path. Doesn't really matter.
-
-If you get an error building the library that deals with not being able to find functions that are in the standard library (cmath, vector, etc.) then all that's happening is the project is looking in the wrong spot for the includes. So, to fix this, go to the solution explorer and right click on the project. Click properties, and where it says Windows SDK Version, choose whatever version of Windows you're on.
-
-\section{Parameters}
-\subsection{Configuration}
-Configuration parameters are set in a class that is initiated automatically at run-time and available as an external class called settings. Including \verb|"configuration.h"| makes the class available and accessible through \verb|parameters::settings|. The class is only used for parameters that are intended to remain constant for the duration of the program. The method reads configuration files located in \verb|input\|.
-
-\subsubsection{Input File Format}
-The file format is meant to be simple, although admittedly fragile. Comments (lines beginning with a \#) and newlines are ignored; lines containing input settings are tokenized by comma. The parser for this is located in the header file \verb|"parse_aa.h"|. Assume that your configuration file reads:
+\section{Configuration File Parsers}
+The file format is meant to be simple, although admittedly fragile. Comments (lines beginning with a \#) and newlines are ignored; lines containing input settings are tokenized by comma. The parser for this is located in the header file \verb|"parse.h"|. Assume that your configuration file reads:
 \begin{verbatim}
 # Simple example of a configuration file.
+# Note: booleans are evaluated as true if they're equivalent to 1, true,
+# or True - all other values evaluate to false 
 # Input the gender to run (0 = male, 1 = female, 2 = all), a double for step
-# size, and a boolean for calibration (0 = no, 1 = yes).
+# size, and a boolean for calibration.
 
-1, 0.01231, 1
+1, 0.01231, true
+
 \end{verbatim}
 The code to parse this would be as simple as:
 \begin{verbatim}
-std::vector<std::string> tokenized_line;
-// the parse function will automatically ignore comments
-tokenized_line = parse::get_tokenized_line(input_file, comment_, delim);
+auto items = parse::get_tokens(input_file, comment_, delim_);
 // Need to staticly cast integers to enumerator values.
-gender_ = static_cast<Gender>(std::stoi(tokenized_line[0]));
-population_ = std::stod(tokenized_line[1]);
-calibration_ = parse::string_to_bool(tokenized_line[2]);
+gender_ = static_cast<Gender>(std::stoi(items[0]));
+population_ = std::stod(items[1]);
+calibration_ = parse::string_to_bool(items[2]);
 \end{verbatim}
+
+\section{Random Distributions}
+
+
+
+
+\begin{comment}
 \subsubsection{Overall Settings}
 \subsubsection{Calibration Settings}
 \subsection{Literature Parameters}
@@ -177,6 +175,6 @@ if (modeling::distributions::uniform(patient->generator, 0, 1) <
     patient.bathroom = true;
 }
 \end{verbatim}
-
+\end{comment}
 
 \end{document}
