@@ -17,6 +17,7 @@ Parse::tokens Parse::get_tokens(std::ifstream &input_file, const char comment,
   // characters
   std::string line;
   do {
+    if (input_file.eof()) break;
     std::getline(input_file, line);
   } while (line[0] == comment || line[0] == ' ' || line.size() == 0);
   // Now that we have our line, break it into tokens
